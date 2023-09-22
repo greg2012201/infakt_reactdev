@@ -1,1 +1,8 @@
-export const App = () => <main>app</main>;
+import GlobalStyle from "./styles/global";
+
+export const App = () => (
+    <>
+        <GlobalStyle />
+        <main>app</main>
+    </>
+);
