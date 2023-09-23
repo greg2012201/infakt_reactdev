@@ -15,13 +15,13 @@ const useFetch = () => {
         onSuccess: (response: TResponse) => void;
         onError?: (error: string | null) => void;
     }) => {
+        setLoading(true);
         try {
             const response: Response = await fetcher();
             const data: TResponse = await response.json();
-            setLoading(true);
             if (data) {
                 onSuccess(data);
-                setLoading(true);
+                setLoading(false);
                 return;
             }
             throw new Error(DEFAULT_ERROR_MESSAGE);
@@ -34,7 +34,6 @@ const useFetch = () => {
             }
         }
     };
-
     return { isLoading, error, fetchData };
 };
 

@@ -35,7 +35,7 @@ const useAccountantList = () => {
     }, []);
 
     return {
-        isLoading,
+        isLoading: isLoading && !data?.results?.length,
         isLoadingMore: isLoading && !!data?.results?.length,
         error,
         accountants: data?.results ?? [],
