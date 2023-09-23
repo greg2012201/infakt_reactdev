@@ -1,9 +1,9 @@
-import { ReactElement } from "react";
+import { ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
-import theme from "../theme";
+import theme from "./theme";
 
 type Props = {
-    children: ReactElement;
+    children: ReactNode;
 };
 
 export const Providers = ({ children }: Props) => {
