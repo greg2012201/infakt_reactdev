@@ -30,11 +30,15 @@ export const AccountantListItem = ({ picture, name, email, cell, login }: Props)
       <Body>
         <Row>
           <Label>E-mail</Label>
-          <Value hasUnderline>{email}</Value>
+          <Value>
+            <a href={`mailto:${email}`}>{email}</a>
+          </Value>
         </Row>
         <Row>
           <Label>Telefon</Label>
-          <Value>{cell}</Value>
+          <Value noUnderline>
+            <a href={`tel:${cell}`}>{cell}</a>
+          </Value>
         </Row>
         <Row>
           <Label>Średnia cena netto usuługi / m-c</Label>

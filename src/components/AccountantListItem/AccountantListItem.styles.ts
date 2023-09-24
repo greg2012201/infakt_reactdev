@@ -55,10 +55,13 @@ export const Label = styled.p`
   line-height: ${({ theme }) => theme.font.lineHeight.sm};
 `;
 
-export const Value = styled.p<{ hasUnderline?: boolean }>`
-  text-decoration: ${({ hasUnderline = false }) => (hasUnderline ? 'underline' : 'none')};
+export const Value = styled.p<{ noUnderline?: boolean }>`
   font-size: ${({ theme }) => theme.font.size.md};
   line-height: ${({ theme }) => theme.font.lineHeight.md};
+  & > a {
+    color: ${({ theme }) => theme.colors.black.base};
+    text-decoration: ${({ noUnderline = false }) => (noUnderline ? 'none' : 'underline')};
+  }
 `;
 
 export const Row = styled.div`
