@@ -15,6 +15,18 @@ const theme = {
       base: '#FFFFFF',
     },
   },
+  font: {
+    size: {
+      sm: '14px',
+      md: '16px',
+      lg: '24px',
+    },
+    lineHeight: {
+      sm: '20px',
+      md: '24px',
+      lg: '32px',
+    },
+  },
 } as const;
 
 export default theme;
