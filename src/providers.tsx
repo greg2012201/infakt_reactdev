@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
-import { ThemeProvider } from "styled-components";
-import theme from "./theme";
+import { ReactNode } from 'react';
+import { ThemeProvider } from 'styled-components';
+import theme from './theme';
 
 type Props = {
-    children: ReactNode;
+  children: ReactNode;
 };
 
 export const Providers = ({ children }: Props) => {
-    return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
