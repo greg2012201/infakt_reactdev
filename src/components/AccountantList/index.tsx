@@ -1,23 +1,36 @@
 import { AccountantListItem } from '../AccountantListItem';
-import { List } from './AccountantList.styles';
+import { Button } from '../Button';
+import { List, Wrapper } from './AccountantList.styles';
 import useAccountantList from './useAccountantList';
 
 export const AccountantList = () => {
   const { accountants, isLoading, isLoadingMore, fetchMore, error } = useAccountantList();
 
+  if (error) {
+    return (
+      <Wrapper>
+        <p>{error}</p>
+      </Wrapper>
+    );
+  }
+
   if (isLoading) {
-    return <p>Loading...</p>;
+    return (
+      <Wrapper>
+        <p>Loading...</p>
+      </Wrapper>
+    );
   }
   return (
-    <>
+    <Wrapper>
       <List>
         {accountants.map(accountant => {
           return <AccountantListItem key={accountant.login.uuid} {...accountant} />;
         })}
       </List>
-      <button type="button" onClick={() => fetchMore()}>
-        {isLoadingMore ? 'fetching more' : 'fetch more'}
-      </button>
-    </>
+      <Button type="button" onClick={() => fetchMore()}>
+        {isLoadingMore ? 'Pobieranie...' : 'Pobierz więcej'}
+      </Button>
+    </Wrapper>
   );
 };
