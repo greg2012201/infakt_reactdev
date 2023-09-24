@@ -22,6 +22,7 @@ export const Avatar = styled.img`
 export const Header = styled.div`
   display: flex;
   gap: 16px;
+  max-height: 64px;
 `;
 export const HeadingGroup = styled.div`
   display: flex;
