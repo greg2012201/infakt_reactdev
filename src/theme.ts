@@ -15,6 +15,6 @@ const theme = {
             base: "#FFFFFF",
         },
     },
-};
+} as const;
 
 export default theme;
