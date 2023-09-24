@@ -17,11 +17,13 @@ const theme = {
   },
   font: {
     size: {
+      xsm: '12px',
       sm: '14px',
       md: '16px',
       lg: '24px',
     },
     lineHeight: {
+      xsm: '16px',
       sm: '20px',
       md: '24px',
       lg: '32px',
