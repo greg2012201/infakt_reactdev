@@ -1,9 +1,21 @@
 import { AccountantType } from '../../types';
-import { Avatar, Header, Heading, HeadingGroup, SubHeading, Wrapper } from './AccountantListItem.styles';
+import {
+  Avatar,
+  Body,
+  Currency,
+  Header,
+  Heading,
+  HeadingGroup,
+  Label,
+  Row,
+  SubHeading,
+  Value,
+  Wrapper,
+} from './AccountantListItem.styles';
 
 type Props = AccountantType;
 
-export const AccountantListItem = ({ picture, name, ...props }: Props) => {
+export const AccountantListItem = ({ picture, name, email, cell, ...props }: Props) => {
   return (
     <Wrapper>
       <Header>
@@ -13,6 +25,22 @@ export const AccountantListItem = ({ picture, name, ...props }: Props) => {
           <Heading>{`${name.first} ${name.last}`}</Heading>
         </HeadingGroup>
       </Header>
+      <Body>
+        <Row>
+          <Label>E-mail</Label>
+          <Value hasUnderline>{email}</Value>
+        </Row>
+        <Row>
+          <Label>Telefon</Label>
+          <Value>{cell}</Value>
+        </Row>
+        <Row>
+          <Label>Średnia cena netto usuługi / m-c</Label>
+          <Value>
+            {`${350}`} <Currency>pln</Currency>
+          </Value>
+        </Row>
+      </Body>
     </Wrapper>
   );
 };

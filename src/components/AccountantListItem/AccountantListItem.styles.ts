@@ -1,8 +1,11 @@
 import { styled } from 'styled-components';
 
 export const Wrapper = styled.li`
+  display: flex;
+  flex-direction: column;
   width: 300px;
   height: 376px;
+  gap: 24px;
   padding: 24px;
   border: 1px solid;
   border-color: ${({ theme }) => `${theme.colors.grey[200]}`};
@@ -38,4 +41,33 @@ export const SubHeading = styled.p`
   color: ${({ theme }) => theme.colors.grey[800]};
   font-size: ${({ theme }) => theme.font.size.md};
   line-height: ${({ theme }) => theme.font.lineHeight.md};
+`;
+
+export const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+`;
+
+export const Label = styled.p`
+  color: ${({ theme }) => theme.colors.grey[800]};
+  font-size: ${({ theme }) => theme.font.size.sm};
+  line-height: ${({ theme }) => theme.font.lineHeight.sm};
+`;
+
+export const Value = styled.p<{ hasUnderline?: boolean }>`
+  text-decoration: ${({ hasUnderline = false }) => (hasUnderline ? 'underline' : 'none')};
+  font-size: ${({ theme }) => theme.font.size.md};
+  line-height: ${({ theme }) => theme.font.lineHeight.md};
+`;
+
+export const Row = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Currency = styled.span`
+  text-transform: uppercase;
+  font-size: ${({ theme }) => theme.font.size.xsm};
+  line-height: ${({ theme }) => theme.font.lineHeight.xsm};
 `;
