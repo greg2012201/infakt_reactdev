@@ -1,8 +1,10 @@
 import { AccountantType } from '../../types';
+import { Button } from '../Button';
 import {
   Avatar,
   Body,
   Currency,
+  Footer,
   Header,
   Heading,
   HeadingGroup,
@@ -15,7 +17,7 @@ import {
 
 type Props = AccountantType;
 
-export const AccountantListItem = ({ picture, name, email, cell, ...props }: Props) => {
+export const AccountantListItem = ({ picture, name, email, cell, login }: Props) => {
   return (
     <Wrapper>
       <Header>
@@ -41,6 +43,11 @@ export const AccountantListItem = ({ picture, name, email, cell, ...props }: Pro
           </Value>
         </Row>
       </Body>
+      <Footer>
+        <Button type="button" onClick={() => console.log('read more for user id', login.uuid)}>
+          Dowiedz się więcej
+        </Button>
+      </Footer>
     </Wrapper>
   );
 };
