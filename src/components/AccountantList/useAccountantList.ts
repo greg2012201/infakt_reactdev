@@ -10,7 +10,7 @@ const useAccountantList = () => {
         fetchData<AccountantResponseType>({
             fetcher: async () =>
                 await fetch(
-                    `https://randomuser.me/api/?seed=abc&gender=female&page=${(data?.info?.page ?? 0) + 1}&results=5`,
+                    `https://randomuser.me/api/?seed=abc&gender=female&page=${(data?.info?.page ?? 0) + 1}&results=4`,
                     { method: "GET" }
                 ),
             onSuccess: (res) => {
