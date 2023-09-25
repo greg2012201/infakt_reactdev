@@ -8,7 +8,7 @@ export const Main = styled.main`
   margin: 0 auto;
   max-width: 1440px;
 
-  @media (min-width: 390px) {
+  @media (min-width: 600px) {
     padding: 48px 84px 24px 84px;
   }
 `;
