@@ -1,6 +1,6 @@
 import { AccountantListItem } from '../AccountantListItem';
 import { Button } from '../Button';
-import { List, Wrapper } from './AccountantList.styles';
+import { ErrorMessage, List, Wrapper } from './AccountantList.styles';
 import useAccountantList from './useAccountantList';
 
 export const AccountantList = () => {
@@ -9,7 +9,7 @@ export const AccountantList = () => {
   if (error) {
     return (
       <Wrapper>
-        <p>{error}</p>
+        <ErrorMessage>{error}</ErrorMessage>
       </Wrapper>
     );
   }

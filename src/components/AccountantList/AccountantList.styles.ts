@@ -12,5 +12,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   width: fit-content;
   align-items: center;
+  align-self: center;
   gap: 24px;
+`;
+
+export const ErrorMessage = styled.p`
+  color: ${({ theme }) => theme.colors.error.base};
 `;

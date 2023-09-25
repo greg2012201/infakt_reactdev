@@ -14,6 +14,9 @@ const theme = {
     white: {
       base: '#FFFFFF',
     },
+    error: {
+      base: '#FD5C63',
+    },
   },
   font: {
     size: {
