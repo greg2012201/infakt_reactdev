@@ -1,7 +1,6 @@
 {
   "name": "home-assignment",
   "version": "0.1.0",
-  "homepage": "http://greg2012201.github.io/infakt_reactdev",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -22,9 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "pretty": "npx prettier . --write",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "pretty": "npx prettier . --write"
   },
   "eslintConfig": {
     "extends": [
@@ -47,7 +44,6 @@
   "devDependencies": {
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
-    "gh-pages": "^6.0.0",
     "prettier": "^3.0.3"
   }
 }
