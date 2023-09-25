@@ -5,4 +5,6 @@ export const Main = styled.main`
   flex-direction: column;
   gap: 48px;
   padding: 48px 84px 24px 84px;
+  margin: 0 auto;
+  max-width: 1440px;
 `;

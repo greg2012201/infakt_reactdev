@@ -10,9 +10,7 @@ export const List = styled.ul`
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-self: center;
   width: fit-content;
   align-items: center;
-  max-width: 1440px;
   gap: 24px;
 `;
